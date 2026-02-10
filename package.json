@@ -1,0 +1,16 @@
+{
+  "name": "tetris-app",
+  "version": "1.0.0",
+  "description": "Tetris Game for Android",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx serve www",
+    "build": "echo 'Static files ready'",
+    "cap:init": "npx cap init Tetris com.doruk.tetris --web-dir www",
+    "cap:android": "npx cap add android",
+    "cap:sync": "npx cap sync",
+    "cap:open": "npx cap open android"
+  },
+  "author": "Doruk",
+  "license": "MIT"
+}

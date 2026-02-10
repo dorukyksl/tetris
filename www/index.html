@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="header">
+            <div id="score-container">
+                <div class="stat">
+                    <span class="label">SKOR</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">SEVİYE</span>
+                    <span id="level">1</span>
+                </div>
+                <div class="stat">
+                    <span class="label">SATIR</span>
+                    <span id="lines">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="game-area">
+            <canvas id="tetris"></canvas>
+            <div id="next-piece">
+                <span class="label">SONRAKİ</span>
+                <canvas id="next"></canvas>
+            </div>
+        </div>
+        
+        <div id="controls">
+            <div id="control-row-1">
+                <button id="btn-rotate" class="control-btn">↻</button>
+            </div>
+            <div id="control-row-2">
+                <button id="btn-left" class="control-btn">◀</button>
+                <button id="btn-down" class="control-btn">▼</button>
+                <button id="btn-right" class="control-btn">▶</button>
+            </div>
+            <div id="control-row-3">
+                <button id="btn-drop" class="control-btn wide">⬇ BIRAK</button>
+            </div>
+        </div>
+        
+        <div id="pause-btn-container">
+            <button id="btn-pause">⏸ DURAKLAT</button>
+        </div>
+        
+        <!-- Overlay screens -->
+        <div id="start-screen" class="overlay">
+            <h1>🎮 TETRİS</h1>
+            <p>Klasik blok oyunu</p>
+            <button id="btn-start">▶ BAŞLA</button>
+        </div>
+        
+        <div id="pause-screen" class="overlay hidden">
+            <h2>⏸ DURAKLATILDI</h2>
+            <button id="btn-resume">▶ DEVAM ET</button>
+        </div>
+        
+        <div id="gameover-screen" class="overlay hidden">
+            <h2>💀 OYUN BİTTİ</h2>
+            <p>Skor: <span id="final-score">0</span></p>
+            <p>Seviye: <span id="final-level">1</span></p>
+            <button id="btn-restart">🔄 YENİDEN BAŞLA</button>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
